@@ -1,5 +1,5 @@
 <html>
-    <!--
+    <!--if else
 1.    Write a program to check a number is divisible by 7 or not
 2.    Write a program to check a number is factor of 84 or not
 3.    Write a program to check a number is multiple of 3 or not
@@ -15,6 +15,23 @@
 13.  Write a program to print the least number in given three numbers
 14.  Write a program to print the given three numbers in ascending order
 15.   Write a program to print the given three numbers in descending order
+
+loop
+1.    Write a program to print 1 to 10 numbers using a while loop 
+2.    Write a program to print 10 to 1 numbers using a while loop 
+3.    Write a program to print 5 to 15 numbers using a while loop 
+4.    Write a program to print 15 to 10 numbers using a while loop 
+5.    Write a program to print 1 to 10 even numbers using a while loop 
+6.    Write a program to print 1 to 10 odd numbers using a while loop 
+7.    Write a program to print first ten multiples of 4 using a while loop (multiples of 4 are 4,8,12,16,20,.....) 
+8.    Write a program to print multiplication table of 6 using while loop 
+9.    Write a program to print factors of 24 using while loop (factors of 24 are 1,2,3,4,6,8,12,24) 
+10. Write a program to print the number of factors of 24 using while loop (number of factors for 24 is 8) 
+11. Write a program to print 1 to 10 numbers using a for loop 
+12. Write a program to print 10 to 1 numbers using a for loop 
+13. Write a program to print all numbers from 1 to a given number 
+14. Write a program to print 1 to 10 even numbers using a for loop 
+15. Write a program to print 1 to 10 odd  
 -->
 <input type="text" name="number1" id="number1" placeholder="Number 1" value="">
 
@@ -153,11 +170,11 @@ function least3(){
     var num1 = document.getElementById('number31').value;
     var num2 = document.getElementById('number32').value;
     var num3 = document.getElementById('number33').value;
-    if(num1<num2 && num1<num3){
+    if(parseInt(num1)<parseInt(num2) && parseInt(num1)<parseInt(num3)){
         document.getElementById('result3').innerHTML = num1+'is Least';
-    }else if(num2<num1 && num2<num3){
+    }else if(parseInt(num2)<parseInt(num1) && parseInt(num2)<parseInt(num3)){
         document.getElementById('result3').innerHTML = num2+'is Least';
-    }else if(num3<num1 && num3<num2){
+    }else if(parseInt(num3)<parseInt(num1) && parseInt(num3)<parseInt(num2)){
         document.getElementById('result3').innerHTML = num3+'is Least';
     }
 }
@@ -166,21 +183,25 @@ function get3asc(){
     var num1 = document.getElementById('number31').value;
     var num2 = document.getElementById('number32').value;
     var num3 = document.getElementById('number33').value;
-    if(num1>num2){
-        if(num1>num3){
-        document.getElementById('result3').innerHTML = num3+', '+num2+','+num1;
-        }else if(num1<num3){
-            document.getElementById('result3').innerHTML = num2+', '+num1+','+num3;  
-        }else{
-            document.getElementById('result3').innerHTML = num2+', '+num3+','+num1;  
-        }
-    }else{
-        if(num2>num3){
-        document.getElementById('result3').innerHTML = num3+', '+num1+','+num2;
-        }else{
-            document.getElementById('result3').innerHTML = num1+', '+num3+','+num2;   
-        }
-    }
+    if(parseInt(num1)>parseInt(num2) && parseInt(num1)>parseInt(num3)){
+		if(parseInt(num2)>parseInt(num3)){
+			document.getElementById('result3').innerHTML = num3+', '+num2+','+num1;
+		}else{
+			document.getElementById('result3').innerHTML = num2+', '+num3+','+num1;
+		}
+    }else if(parseInt(num2)>parseInt(num1) && parseInt(num2)>parseInt(num3)){
+			if(parseInt(num1)>parseInt(num3)){
+				document.getElementById('result3').innerHTML = num3+', '+num1+','+num2;
+			}else{
+				document.getElementById('result3').innerHTML = num1+', '+num3+','+num2;
+			}
+     }else if(parseInt(num3)>parseInt(num1) && parseInt(num3)>parseInt(num2)){
+			if(parseInt(num1)>parseInt(num2)){
+				document.getElementById('result3').innerHTML = num2+', '+num1+','+num3;
+			}else{
+				document.getElementById('result3').innerHTML = num1+', '+num2+','+num3;
+			}
+       }
 }
 function get3desc(){
     var num1 = document.getElementById('numbers31').value;
