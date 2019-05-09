@@ -1,0 +1,164 @@
+<html>
+    <!--
+1.    Write a program to check a number is divisible by 7 or not
+2.    Write a program to check a number is factor of 84 or not
+3.    Write a program to check a number is multiple of 3 or not
+4.    Write a program to check a number is positive or not
+5.    Write a program to check a number is having 4 at units place
+6.    Write a program to check a number is 3digited number or not
+7.    Write a program to print even or odd for a given number
+8.    Write a program to print the greatest number in given two numbers
+9.    Write a program to print the least number in given two numbers
+10.  Write a program to print the given two numbers in ascending order
+11.  Write a program to print the given two numbers in descending order
+12.  Write a program to print the greatest number in given three numbers
+13.  Write a program to print the least number in given three numbers
+14.  Write a program to print the given three numbers in ascending order
+15.   Write a program to print the given three numbers in descending order
+-->
+<input type="text" name="number1" id="number1" placeholder="Number 1" value="">
+
+
+<h4 id="result"></h4>
+
+<button onclick="div7()">Is divisible By 7</button>
+<button onclick="fact84()">Factor of 84 or not</button>
+<button onclick="mul3()">multiple of 3</button>
+<button onclick="pos()">positive or not</button>
+<button onclick="unit4()">Is 4 in units Place</button>
+<button onclick="digit3()">Is 3 digit number or not</button>
+<h2></h2>
+<input type="text" name="numbers1" id="numbers1" placeholder="Number 1" value="">
+<input type="text" name="numbers2" id="numbers2" placeholder="Number 2" value="">
+<h4 id="result2" ></h4>
+<button onclick="grater2()">Gratest number in 2 numbers</button>
+<button onclick="least2()">least number in 2 numbers</button>
+<button onclick="asc2()">Two numbers in ASC</button>
+<button onclick="desc2()">Two numbers in  DESC</button>
+<h2></h2>
+<input type="text" name="number31" id="number31" placeholder="Number 1" value="">
+<input type="text" name="number32" id="number32" placeholder="Number 2" value="">
+<input type="text" name="number33" id="number33" placeholder="Number 3" value="">
+<h4 id="result3" ></h4>
+<button onclick="grater3()">Greater of 3 numbers</button>
+<button onclick="least3()">Least of 3 numbers</button>
+<button onclick="get3asc()">3 numbers in ASC</button>
+<button onclick="get3desc()">3 numbers in DESC</button>
+<script>
+function div7(){
+    var num1 = document.getElementById('number1').value;
+    if((num1 % 7) == 0){
+        document.getElementById('result').innerHTML = 'Divisible By 7';
+    }else{
+        document.getElementById('result').innerHTML ='Not Divisible By 7';
+    }
+}
+
+function fact84(){
+    var num1 = document.getElementById('number1').value;
+    if((84 % num1) == 0){
+        document.getElementById('result').innerHTML = 'Factor of 84';
+    }else{
+        document.getElementById('result').innerHTML ='Not Factor of 84';
+    }
+}
+function mul3(){
+    var num1 = document.getElementById('number1').value;
+    if((num1 % 3) == 0){
+        document.getElementById('result').innerHTML = 'Multiple of 3';
+    }else{
+        document.getElementById('result').innerHTML ='Not Multiple of 3';
+    }
+}
+function pos(){
+    var num1 = document.getElementById('number1').value;
+    if(parseInt(num1) > 0){
+        document.getElementById('result').innerHTML = 'Postive Number';
+    }else{
+        document.getElementById('result').innerHTML ='Not Postive';
+    }
+}
+function unit4(){
+    var num1 = document.getElementById('number1').value;
+    if(num1[num1.length -1]  == 4){
+        document.getElementById('result').innerHTML = 'Units Place contains 4';
+    }else{
+        document.getElementById('result').innerHTML ='Units Place not contains 4';
+    }
+}
+function digit3(){
+    var num1 = document.getElementById('number1').value;
+    if(num1.length  == 3){
+        document.getElementById('result').innerHTML = '3 Digit Number';
+    }else{
+        document.getElementById('result').innerHTML ='Not a 3 Digit Number';
+    }
+}
+
+
+
+function grater2(){
+    var num1 = document.getElementById('numbers1').value;
+    var num2 = document.getElementById('numbers2').value;
+    if(num1>num2){
+        document.getElementById('result2').innerHTML = num1+' Greater than '+num2;
+    }else{
+        document.getElementById('result2').innerHTML =num2+' Greater than '+num1;
+    }
+}
+function least2(){
+    var num1 = document.getElementById('numbers1').value;
+    var num2 = document.getElementById('numbers2').value;
+    if(num1<num2){
+        document.getElementById('result2').innerHTML = num1+' is Least ';
+    }else{
+        document.getElementById('result2').innerHTML =num2+' is Least ';
+    }
+}
+
+function asc2(){
+    var num1 = document.getElementById('numbers1').value;
+    var num2 = document.getElementById('numbers2').value;
+    if(num1<num2){
+        document.getElementById('result2').innerHTML = num1+', '+num2;
+    }else{
+        document.getElementById('result2').innerHTML =num2+', '+num1;
+    }
+}
+function desc2(){
+    var num1 = document.getElementById('numbers1').value;
+    var num2 = document.getElementById('numbers2').value;
+    if(num1>num2){
+        document.getElementById('result2').innerHTML = num1+', '+num2;
+    }else{
+        document.getElementById('result2').innerHTML =num2+', '+num1;
+    }
+}
+
+
+function get3asc(){
+    var num1 = document.getElementById('numbers31').value;
+    var num2 = document.getElementById('numbers32').value;
+    var num3 = document.getElementById('numbers33').value;
+    if(num1<num2){
+        document.getElementById('result2').innerHTML = num1+', '+num2;
+    }else{
+        document.getElementById('result2').innerHTML =num2+', '+num1;
+    }
+}
+function get3desc(){
+    var num1 = document.getElementById('numbers31').value;
+    var num2 = document.getElementById('numbers32').value;
+    var num3 = document.getElementById('numbers33').value;
+    if(num1>num2){
+        document.getElementById('result2').innerHTML = num1+', '+num2;
+    }else{
+        document.getElementById('result2').innerHTML =num2+', '+num1;
+    }
+}
+</script>
+
+
+
+
+</html>
