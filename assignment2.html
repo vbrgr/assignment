@@ -136,14 +136,50 @@ function desc2(){
 }
 
 
+function grater3(){
+    var num1 = document.getElementById('number31').value;
+    var num2 = document.getElementById('number32').value;
+    var num3 = document.getElementById('number33').value;
+    if(num1>num2 && num1>num3){
+        document.getElementById('result3').innerHTML = num1+'is Greater';
+    }else if(num2>num1 && num2>num3){
+        document.getElementById('result3').innerHTML = num2+'is Greater';
+    }else if(num3>num1 && num3>num2){
+        document.getElementById('result3').innerHTML = num3+'is Greater';
+    }
+}
+
+function least3(){
+    var num1 = document.getElementById('number31').value;
+    var num2 = document.getElementById('number32').value;
+    var num3 = document.getElementById('number33').value;
+    if(num1<num2 && num1<num3){
+        document.getElementById('result3').innerHTML = num1+'is Least';
+    }else if(num2<num1 && num2<num3){
+        document.getElementById('result3').innerHTML = num2+'is Least';
+    }else if(num3<num1 && num3<num2){
+        document.getElementById('result3').innerHTML = num3+'is Least';
+    }
+}
+
 function get3asc(){
-    var num1 = document.getElementById('numbers31').value;
-    var num2 = document.getElementById('numbers32').value;
-    var num3 = document.getElementById('numbers33').value;
-    if(num1<num2){
-        document.getElementById('result2').innerHTML = num1+', '+num2;
+    var num1 = document.getElementById('number31').value;
+    var num2 = document.getElementById('number32').value;
+    var num3 = document.getElementById('number33').value;
+    if(num1>num2){
+        if(num1>num3){
+        document.getElementById('result3').innerHTML = num3+', '+num2+','+num1;
+        }else if(num1<num3){
+            document.getElementById('result3').innerHTML = num2+', '+num1+','+num3;  
+        }else{
+            document.getElementById('result3').innerHTML = num2+', '+num3+','+num1;  
+        }
     }else{
-        document.getElementById('result2').innerHTML =num2+', '+num1;
+        if(num2>num3){
+        document.getElementById('result3').innerHTML = num3+', '+num1+','+num2;
+        }else{
+            document.getElementById('result3').innerHTML = num1+', '+num3+','+num2;   
+        }
     }
 }
 function get3desc(){
