@@ -100,7 +100,7 @@ function digit3(){
 function grater2(){
     var num1 = document.getElementById('numbers1').value;
     var num2 = document.getElementById('numbers2').value;
-    if(num1>num2){
+    if(parseInt(num1)>parseInt(num2)){
         document.getElementById('result2').innerHTML = num1+' Greater than '+num2;
     }else{
         document.getElementById('result2').innerHTML =num2+' Greater than '+num1;
@@ -109,7 +109,7 @@ function grater2(){
 function least2(){
     var num1 = document.getElementById('numbers1').value;
     var num2 = document.getElementById('numbers2').value;
-    if(num1<num2){
+    if(parseInt(num1)<parseInt(num2)){
         document.getElementById('result2').innerHTML = num1+' is Least ';
     }else{
         document.getElementById('result2').innerHTML =num2+' is Least ';
@@ -119,7 +119,7 @@ function least2(){
 function asc2(){
     var num1 = document.getElementById('numbers1').value;
     var num2 = document.getElementById('numbers2').value;
-    if(num1<num2){
+    if(parseInt(num1)<parseInt(num2)){
         document.getElementById('result2').innerHTML = num1+', '+num2;
     }else{
         document.getElementById('result2').innerHTML =num2+', '+num1;
@@ -128,7 +128,7 @@ function asc2(){
 function desc2(){
     var num1 = document.getElementById('numbers1').value;
     var num2 = document.getElementById('numbers2').value;
-    if(num1>num2){
+    if(parseInt(num1)>parseInt(num2)){
         document.getElementById('result2').innerHTML = num1+', '+num2;
     }else{
         document.getElementById('result2').innerHTML =num2+', '+num1;
@@ -140,11 +140,11 @@ function grater3(){
     var num1 = document.getElementById('number31').value;
     var num2 = document.getElementById('number32').value;
     var num3 = document.getElementById('number33').value;
-    if(num1>num2 && num1>num3){
+    if(parseInt(num1)>parseInt(num2) && parseInt(num1)>parseInt(num3)){
         document.getElementById('result3').innerHTML = num1+'is Greater';
-    }else if(num2>num1 && num2>num3){
+    }else if(parseInt(num2)>parseInt(num1) && parseInt(num2)>parseInt(num3)){
         document.getElementById('result3').innerHTML = num2+'is Greater';
-    }else if(num3>num1 && num3>num2){
+    }else if(parseInt(num3)>parseInt(num1) && parseInt(num3)>parseInt(num2)){
         document.getElementById('result3').innerHTML = num3+'is Greater';
     }
 }
