@@ -209,21 +209,21 @@ function get3desc(){
     var num3 = document.getElementById('number33').value;
     if(parseInt(num1)<parseInt(num2) && parseInt(num1)<parseInt(num3)){
 		if(parseInt(num2)<parseInt(num3)){
-			document.getElementById('result3').innerHTML = num1+', '+num2+','+num3;
+			document.getElementById('result3').innerHTML = num3+', '+num2+','+num1;
 		}else{
-			document.getElementById('result3').innerHTML = num1+', '+num3+','+num2;
+			document.getElementById('result3').innerHTML = num2+', '+num3+','+num1;
 		}
     }else if(parseInt(num2)<parseInt(num1) && parseInt(num2)<parseInt(num3)){
 			if(parseInt(num1)<parseInt(num3)){
-				document.getElementById('result3').innerHTML = num2+', '+num1+','+num3;
+				document.getElementById('result3').innerHTML = num3+', '+num1+','+num2;
 			}else{
-				document.getElementById('result3').innerHTML = num2+', '+num3+','+num1;
+				document.getElementById('result3').innerHTML = num1+', '+num3+','+num2;
 			}
      }else if(parseInt(num3)<parseInt(num1) && parseInt(num3)<parseInt(num2)){
 			if(parseInt(num1)<parseInt(num2)){
-				document.getElementById('result3').innerHTML = num3+', '+num1+','+num2;
+				document.getElementById('result3').innerHTML = num2+', '+num1+','+num3;
 			}else{
-				document.getElementById('result3').innerHTML = num3+', '+num2+','+num1;
+				document.getElementById('result3').innerHTML = num1+', '+num2+','+num3;
 			}
        }
 }
